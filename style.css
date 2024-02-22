@@ -157,7 +157,7 @@ header {
     body {
 
 
-        background: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+        background: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
         background-position: top left, bottom right;
         background-repeat: no-repeat;
         background-size: 400px;
