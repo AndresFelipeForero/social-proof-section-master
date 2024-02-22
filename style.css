@@ -116,7 +116,7 @@ header {
         width: 42px;
     }
 
-    & * {
+    .card * {
         font-size: 16px;
     }
 
@@ -185,15 +185,15 @@ header {
             }
         }
 
-        & :nth-child(1) {
+        .starcontainer :nth-child(1) {
             align-self: self-start;
         }
 
-        & :nth-child(2) {
+        .starcontainer :nth-child(2) {
             align-self: center;
         }
 
-        & :nth-child(3) {
+        .starcontainer :nth-child(3) {
             align-self: self-end;
         }
     }
