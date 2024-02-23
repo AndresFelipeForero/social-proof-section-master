@@ -36,24 +36,24 @@ body {
 
 header {
     margin-bottom: 30px;
+}
 
-    h1 {
-        color: var(--VeryDarkMagenta);
-        font-size: 30px;
-        line-height: 30px;
-        font-weight: 700;
-        text-align: center;
-        margin: 0 64px 30px 64px;
-    }
+header h1 {
+    color: var(--VeryDarkMagenta);
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 64px 30px 64px;
+}
 
-    p {
-        color: var(--DarkGrayishMagenta);
-        text-align: center;
-        line-height: 25px;
-        font-size: 16px;
-        font-weight: 500;
-        margin: 0 33px;
-    }
+header p {
+    color: var(--DarkGrayishMagenta);
+    text-align: center;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 33px;
 }
 
 /* ---------------------Stars--------------------- */
@@ -81,16 +81,18 @@ header {
     justify-content: center;
     gap: 8px;
 
-    .fivestars {
-        min-width: 110px;
-        text-align: center;
-    }
+    
+}
 
-    .text {
-        text-align: center;
-        min-width: 240px;
-        font-size: 14px;
-    }
+.star .fivestars {
+    min-width: 110px;
+    text-align: center;
+}
+
+.star .text {
+    text-align: center;
+    min-width: 240px;
+    font-size: 14px;
 }
 
 /* ---------------------Cards--------------------- */
@@ -111,39 +113,44 @@ header {
         auto 1fr;
     gap: 30px 23px;
 
-    img {
-        grid-area: image;
-        border-radius: 50%;
-        width: 42px;
-    }
+    
 
-    .card * {
-        font-size: 16px;
-    }
+}
+.card * {
+    font-size: 16px;
+}
 
-    .card__info {
-        grid-area: info;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        justify-content: center;
-        gap: 4px;
+.card img {
+    grid-area: image;
+    border-radius: 50%;
+    width: 42px;
+}
 
-        .name {
-            color: var(--White);
-        }
 
-        .status {
-            color: var(--SoftPink);
-        }
-    }
 
-    p {
-        grid-area: parrafo;
-        color: var(--White);
-        line-height: 22px;
-    }
+.card .card__info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    gap: 4px;
 
+    
+}
+
+.card .card__info .name {
+    color: var(--White);
+}
+
+.card .card__info .status {
+    color: var(--SoftPink);
+}
+
+.card p {
+    grid-area: parrafo;
+    color: var(--White);
+    line-height: 22px;
 }
 
 /* ---------------------Footer--------------------- */
@@ -156,49 +163,56 @@ header {
 @media only screen and (min-width:376px) {
 
     body {
-
-
         background: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
         background-position: top left, bottom right;
         background-repeat: no-repeat;
         background-size: 400px;
     }
 
+/* ---------------------Header--------------------- */
+
+
     header {
         width: 90%;
-
-        p {
-            margin: 0;
-        }
     }
+
+    header p {
+        margin: 0;
+    }
+
+/* ---------------------Stars--------------------- */
+
 
     .starcontainer {
-
         width: 90%;
         max-width: 100%;
-
-        .star {
-            width: 80%;
-            max-width: 500px;
-
-            .fivestars {
-                align-self: center;
-            }
-        }
-
-        & :nth-child(1) {
-            align-self: self-start;
-        }
-
-        & :nth-child(2) {
-            align-self: center;
-        }
-
-        & :nth-child(3) {
-            align-self: self-end;
-        }
+        
     }
 
+    .starcontainer .star {
+        width: 80%;
+        max-width: 500px;
+        
+    }
+
+    .starcontainer .star .fivestars {
+        align-self: center;
+    }
+
+
+    .starcontainer :nth-child(1) {
+        align-self: self-start;
+    }
+
+    .starcontainer :nth-child(2) {
+        align-self: center;
+    }
+
+    .starcontainer :nth-child(3) {
+        align-self: self-end;
+    }
+
+/* ---------------------Cards--------------------- */
 
     .cardscontainer {
         display: grid;
@@ -208,11 +222,9 @@ header {
         gap: 30px;
         justify-content: center;
         justify-items: center;
-
-
-        .card {
-            margin: 0;
-        }
+    }
+    .card {
+        margin: 0;
     }
 }
 
@@ -234,81 +246,91 @@ header {
             "cardscontainer cardscontainer" 1fr
             "footer         footer" /
              1fr            540px;
+    }
 
-        header {
-            grid-area: header;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            padding-right: 25%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            
-            h1 {
-                margin: 0;
-                padding-right: 10%;
-                width: 100%;
-                
-                font-size: 40px;
-                text-align: start;
-                line-height: 40px;
+/* ---------------------Header--------------------- */
 
-            }
+    .container header {
+        grid-area: header;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-right: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 
-            p{
-                text-align: start;
-            }
-
-        }
-
-        .starcontainer {
-            grid-area: starcontainer;
-            
-            height: 70%;
-            width: 100%;
-            margin: 0;
-
-            .star {
-                flex-direction: row;
-                max-width: 700px;
-                width: 83%;
-                padding: 0 40px;
-                height: 55px;
-            }
-        }
-
-        .cardscontainer {
-            grid-area: cardscontainer;
-            
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            height: 270px;
-
-            .card {
-                height: 85%;
-            }
-            
-            > :nth-child(1) {
-                align-self: self-start;
-            }
+    header h1 {
+        margin: 0;
+        padding-right: 10%;
+        width: 100%;
         
-            > :nth-child(2) {
-                align-self: center;
-            }
+        font-size: 40px;
+        text-align: start;
+        line-height: 40px;
+
+    }
+
+    header p{
+        text-align: start;
+    }
+
+/* ---------------------Stars--------------------- */
+
+
+    .starcontainer {
+        grid-area: starcontainer;
+        height: 70%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .star {
+        flex-direction: row;
+        max-width: 700px;
+        width: 83%;
+        padding: 0 40px;
+        height: 55px;
+    }
+
+/* ---------------------Cards--------------------- */
+
+
+    .cardscontainer {
+        grid-area: cardscontainer;
         
-            > :nth-child(3) {
-                align-self: self-end;
-            }
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        height: 270px;
 
-        }
+        
+    }
 
-        .attribution {
-            grid-area: footer;
-            text-align: center;
-        }
+    .cardscontainer .card {
+        height: 85%;
+    }
+
+    .cardscontainer > :nth-child(1) {
+        align-self: self-start;
+    }
+
+    .cardscontainer > :nth-child(2) {
+        align-self: center;
+    }
+
+    .cardscontainer > :nth-child(3) {
+        align-self: self-end;
+    }
+
+/* ---------------------Footer--------------------- */
+
+
+    .attribution {
+        grid-area: footer;
+        text-align: center;
     }
 }
 
