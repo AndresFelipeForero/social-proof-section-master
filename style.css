@@ -89,6 +89,7 @@ header {
     .text {
         text-align: center;
         min-width: 240px;
+        font-size: 14px;
     }
 }
 
@@ -290,15 +291,15 @@ header {
                 height: 85%;
             }
             
-            > :nth-child(1) {
+            .cardscontainer > :nth-child(1) {
                 align-self: self-start;
             }
         
-            > :nth-child(2) {
+            .cardscontainer > :nth-child(2) {
                 align-self: center;
             }
         
-            > :nth-child(3) {
+            .cardscontainer > :nth-child(3) {
                 align-self: self-end;
             }
 
